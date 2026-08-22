@@ -24,6 +24,12 @@
   </head>
 
   <body>
+    <% if authenticated? %>
+      <nav>
+        <%= button_to "ログアウト", session_path, method: :delete %>
+      </nav>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
